@@ -29,7 +29,7 @@ if __name__ == '__main__':
     model = network_in_network.Network_in_Network(10)
     optimizer = amaz_optimizer.OptimizerSqueeze(model,lr=lr,epoch=epoch)
     dataset = amaz_cifar10_dl.Cifar10().loader()
-    dataaugumentation = amaz_augumentationCustom.Normalize128
+    dataaugumentation = amaz_augumentationCustom.Normalize32
     args['model'] = model
     args['optimizer'] = optimizer
     args['dataset'] = dataset
