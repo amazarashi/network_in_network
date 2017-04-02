@@ -25,6 +25,9 @@ Cifar10 [(link)](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ### Result
 
+Now, Inspecting on our GPU,,
+coming soon...
+
 <!-- (2) optimizer: MomentumSGD
   - weight decay : 1.0e-4
   - momentum : 0.9
