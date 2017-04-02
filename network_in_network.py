@@ -11,7 +11,7 @@ class Network_in_Network(chainer.Chain):
     def __init__(self,category_num=10):
         initializer = math.sqrt(2)
         super(Network_in_Network,self).__init__(
-            mlp1 = L.MLPConvolution2D(3,(192,160,96),11,stride=1,pad=2,wscale=initializer),
+            mlp1 = L.MLPConvolution2D(3,(192,160,96),5,stride=1,pad=2,wscale=initializer),
             mlp2 = L.MLPConvolution2D(96,(192,192,192),5,stride=1,pad=2,wscale=initializer),
             mlp3 = L.MLPConvolution2D(192,(192,192,category_num),3,stride=1,pad=2,wscale=initializer)
         )
