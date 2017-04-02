@@ -18,15 +18,15 @@ class Network_in_Network(chainer.Chain):
 
     def __call__(self,x,train=True):
         #x = chainer.Variable(x)
-        h = F.relu(self.mlp1(x))
+        h = self.mlp1(x)
         h = F.dropout(h,ratio=.5,train=train)
         h = F.max_pooling_2d(h,3,stride=2,pad=0)
 
-        h = F.relu(self.mlp2(h))
+        h = self.mlp2(h)
         h  = F.dropout(h,ratio=.5,train=train)
         h = F.max_pooling_2d(h,3,stride=2,pad=0)
 
-        h = F.relu(self.mlp3(h))
+        h = self.mlp3(h)
         h  = F.dropout(h,ratio=.5,train=train)
         h = F.max_pooling_2d(h,3,stride=2,pad=0)
 
