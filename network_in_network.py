@@ -26,7 +26,7 @@ class Network_in_Network(chainer.Chain):
         h  = F.dropout(h,ratio=.5,train=train)
         h = F.max_pooling_2d(h,3,stride=2,pad=0)
 
-        h = F.relu(self.mlp3(h))
+        h = self.mlp3(h)
 
         num, categories, y, x = h.data.shape
         h = F.reshape(F.average_pooling_2d(h,(y, x)), (num, categories))
