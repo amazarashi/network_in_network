@@ -27,7 +27,7 @@ if __name__ == '__main__':
     epoch = args.pop('epoch')
 
     model = network_in_network.Network_in_Network(10)
-    optimizer = amaz_optimizer.OptimizerSqueeze(model,lr=lr,epoch=epoch)
+    optimizer = amaz_optimizer.OptimizerNIN(model,lr=lr,epoch=epoch)
     dataset = amaz_cifar10_dl.Cifar10().loader()
     dataaugumentation = amaz_augumentationCustom.Normalize32
     args['model'] = model

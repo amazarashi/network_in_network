@@ -18,16 +18,16 @@ class Network_in_Network(chainer.Chain):
 
     def __call__(self,x,train=True):
         #x = chainer.Variable(x)
-        h = self.mlp1(x)
+        h = F.relu(self.mlp1(x))
         h = F.dropout(h,ratio=.5,train=train)
         h = F.max_pooling_2d(h,3,stride=2,pad=0)
 
-        h = self.mlp2(h)
+        h = F.relu(self.mlp2(h))
         h  = F.dropout(h,ratio=.5,train=train)
         h = F.max_pooling_2d(h,3,stride=2,pad=0)
 
-        h = self.mlp3(h)
-    
+        h = F.relu(self.mlp3(h))
+
         num, categories, y, x = h.data.shape
         h = F.reshape(F.average_pooling_2d(h,(y, x)), (num, categories))
         return h
