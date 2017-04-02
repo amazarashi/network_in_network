@@ -13,7 +13,7 @@ if __name__ == '__main__':
                         default=300,
                         help='maximum epoch')
     parser.add_argument('--batch', '-b', type=int,
-                        default=64,
+                        default=128,
                         help='mini batch number')
     parser.add_argument('--gpu', '-g', type=int,
                         default=-1,

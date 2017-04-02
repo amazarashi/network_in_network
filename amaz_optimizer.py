@@ -36,7 +36,7 @@ class OptimizerSqueeze(Optimizers):
 
 class OptimizerNIN(Optimizers):
 
-    def __init__(self,model=None,lr=0.01,momentum=0.9,epoch=300,schedule=(110,220),weight_decay=1.0e-4):
+    def __init__(self,model=None,lr=0.1,momentum=0.9,epoch=300,schedule=(150,220),weight_decay=1.0e-4):
         super(OptimizerNIN,self).__init__(model,epoch)
         self.lr = lr
         self.optimizer = optimizers.MomentumSGD(self.lr,momentum)
