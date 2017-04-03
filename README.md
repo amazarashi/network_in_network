@@ -25,6 +25,12 @@ Cifar10 [(link)](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ### Result
 
+|             | accuracy(%) |
+|:-----------:|:------------:|
+| paper       |        91.10 |
+| my experiment |        90.97 |
+
+
 ※For my experiment, i adjust optimizer's learning rate to 0.07
 and scheduled on 150-epoch and 225-epoch to mutiply 10%  to learning rate
 
