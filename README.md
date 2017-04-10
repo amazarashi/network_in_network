@@ -25,15 +25,21 @@ Cifar10 [(link)](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ### Result
 
-Now, Inspecting on our GPU,,
-coming soon...
+|             | accuracy(%) |
+|:-----------:|:------------:|
+| paper       |        91.10 |
+| my experiment |        90.97 |
 
-<!-- (2) optimizer: MomentumSGD
+
+※For my experiment, i adjust optimizer's learning rate to 0.07
+and scheduled on 150-epoch and 225-epoch to mutiply 10%  to learning rate
+
+optimizer: MomentumSGD
   - weight decay : 1.0e-4
   - momentum : 0.9
-  - schedule[default:0.1,150:0.01,225:0.001]
+  - schedule[default:0.07,150:0.007,225:0.0007]
 
 
-![accuracy-adam](https://github.com/amazarashi/squeeze-chainer/blob/develop/result/momsgd/accuracy.png "accuracy")
+![accuracy](https://github.com/amazarashi/network_in_network/blob/develop/result/accuracy.png "accuracy")
 
-![loss-adam](https://github.com/amazarashi/squeeze-chainer/blob/develop/result/momsgd/loss.png "loss") -->
+![loss](https://github.com/amazarashi/network_in_network/blob/develop/result/loss.png "loss")
